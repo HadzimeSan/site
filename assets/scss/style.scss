@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@import "blocks/top.scss";
+@import "blocks/header.scss";
+@import "blocks/hero.scss";
+@import "blocks/furniture.scss";
+@import "blocks/filter.scss";
+@import "blocks/basket.scss";
+@import "blocks/FBW.scss";
+@import "blocks/special.scss";
+@import "blocks/product.scss";
+@import "blocks/catalog.scss";
+@import "blocks/footer.scss";
+@import "blocks/catalog-button.scss";
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    box-sizing: border-box;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  .catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .special-offers__list,
+  .products, .specials, .catalog, .catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .product-card, .special-card, .catalog-card {
+    min-width: 0;
+    width: 100%;
+  }
+  .furniture-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .catalog__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .product {
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+  }
+  .product__image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+  }
+}

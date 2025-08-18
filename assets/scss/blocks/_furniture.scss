@@ -1,0 +1,133 @@
+.furniture-for {
+    margin-bottom: 84px;
+    box-sizing: border-box;
+}
+
+.furniture-for__title {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000;
+    margin-bottom: 32px;
+}
+
+.for {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
+
+    &__item {
+        height: 415px;
+        grid-column: span 4;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+    }
+
+    &__item_big {
+        grid-column: span 6;
+    }
+
+    &__item_1 {
+        background-image: url(../images/Home-page/Furniture-for/rest.png);
+    }
+
+    &__item_2 {
+        background-image: url(../images/Home-page/Furniture-for/works.png);
+    }
+
+    &__item_3 {
+        background-image: url(../images/Home-page/Furniture-for/KITCHENS.png);
+    }
+
+    &__item_4 {
+        background-image: url(../images/Home-page/Furniture-for/THE_NURSERY.png);
+    }
+
+    &__item_5 {
+        background-image: url(../images/Home-page/Furniture-for/BATHROOM.png);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .furniture-for {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .furniture-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .furniture-for {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .furniture-for__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 16px 0 16px 10px;
+  }
+  .for {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .for__item {
+    width: 343px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .for__item_1,
+  .for__item_2 {
+    height: 243.78px;
+  }
+  .for__item_3,
+  .for__item_4,
+  .for__item_5 {
+    height: 374.98px;
+  }
+  .for__item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .for__item span, .for__item {
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .for__item:active, .for__item:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+}
